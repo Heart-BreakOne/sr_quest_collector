@@ -64,7 +64,7 @@ async function collectQuests() {
     return
   }
   let isCaptain = "0";
-  if(captain_checkbox) {
+  if (captain_checkbox) {
     isCaptain = "1"
   }
 
@@ -118,12 +118,12 @@ async function collectQuests() {
           const nodeAmount = nodeKey["GoalAmount"];
           if (currentProgressInt >= nodeAmount) {
             const questUrl = ("https://www.streamraiders.com/api/game/?cn=collectQuestReward&slotId=" +
-            questSlotId +
-            "&autoComplete=False&clientVersion=" +
-            clientVersion +
-            "&clientPlatform=WebGL&gameDataVersion=" +
-            dataVersion +
-            "&command=collectQuestReward&isCaptain=" + isCaptain)
+              questSlotId +
+              "&autoComplete=False&clientVersion=" +
+              clientVersion +
+              "&clientPlatform=WebGL&gameDataVersion=" +
+              dataVersion +
+              "&command=collectQuestReward&isCaptain=" + isCaptain)
             await fetch(questUrl, {
               method: 'POST',
               headers: {

@@ -1,8 +1,8 @@
 {
    "manifest_version": 3,
-   "name": "SRHelper",
+   "name": "SRQuests",
    "version": "0.0.1",
-   "description": "SRQuests",
+   "description": "Collect your completed Stream Raiders game quests automatically in the background so you don't have to remember to collect them.",
    "action": {
       "default_popup": "popup.html",
       "default_icon": {
