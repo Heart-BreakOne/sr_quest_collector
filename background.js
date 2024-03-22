@@ -156,6 +156,7 @@ chrome.runtime.onInstalled.addListener(function (details) {
   if (details.reason === 'install') {
     chrome.storage.local.set({
       "checkbox": false,
+      "captain_checkbox": false
     });
     checkGameData()
   }
