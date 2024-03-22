@@ -12,7 +12,6 @@
    },
    "permissions": [
       "storage",
-      "declarativeNetRequestWithHostAccess",
       "cookies"
    ],
    "host_permissions": [
