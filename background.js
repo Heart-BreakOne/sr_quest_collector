@@ -1,5 +1,18 @@
-//Listens for messages from the popup script containing the toggle switch states and send them to the content script.
 'use strict';
+
+chrome.runtime.onMessage.addListener(function(message) {
+  if (message.message === "stayAlive") {
+      try {
+        checkGameData()
+      } catch(error) {
+        
+      }
+      try {
+        collectQuests()
+      } catch(error) {
+      }
+  }
+});
 
 async function getCookies() {
 
@@ -162,6 +175,5 @@ chrome.runtime.onInstalled.addListener(function (details) {
   }
 });
 
-
-setInterval(checkGameData, 60000);
-setInterval(collectQuests, 20000);
+//setInterval(checkGameData, 60000);
+//setInterval(collectQuests, 20000);
